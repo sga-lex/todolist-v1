@@ -1,0 +1,32 @@
+<% if (kindOfDay === "Saturday" || kindOfDay === "Sunday"){ %> /* scriptlet tag for non-html code */
+  <h1 style="color:purple"><%=kindOfDay%> Todo List</h1>
+<% } else { %>
+  <h1 style="color:blue"><%=kindOfDay%> Todo List</h1>
+<% } %>
+
+==== code for displaying the day of the week =======
+
+var today = new Date();
+var dayOfTheWeek = today.getDay();
+var day = "";
+
+if(dayOfTheWeek === 1){
+  day = "Monday";
+  // res.send("Yay! it's the weekend! :)"); // response to the broswer
+} else if(dayOfTheWeek === 2) {
+  day = "Tuesday";
+  // res.sendFile(__dirname + "/index.html");
+  // use res.write when you want to print multiple messages followed by res.send()
+} else if(dayOfTheWeek === 3) {
+  day = "Wednesday";
+} else if(dayOfTheWeek === 4){
+  day = "Thursday";
+} else if(dayOfTheWeek === 5){
+  day = "Friday";
+} else if(dayOfTheWeek === 6){
+  day = "Saturday";
+}else {
+  day = "Sunday";
+}
+
+==== code for displaying the day of the week =======
